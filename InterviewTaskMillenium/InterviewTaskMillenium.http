@@ -1,0 +1,6 @@
+@InterviewTaskMillenium_HostAddress = http://localhost:5290
+
+GET {{InterviewTaskMillenium_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
