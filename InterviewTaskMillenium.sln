@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic", "Logic\Logic.csproj", "{F83F6989-0C65-42EB-BA59-6A81FCA42E74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTaskMillenium.Tests", "InterviewTaskMillenium.Tests\InterviewTaskMillenium.Tests.csproj", "{3A51E406-9243-4A16-9107-5B785493D1D2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F83F6989-0C65-42EB-BA59-6A81FCA42E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F83F6989-0C65-42EB-BA59-6A81FCA42E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F83F6989-0C65-42EB-BA59-6A81FCA42E74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A51E406-9243-4A16-9107-5B785493D1D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A51E406-9243-4A16-9107-5B785493D1D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A51E406-9243-4A16-9107-5B785493D1D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A51E406-9243-4A16-9107-5B785493D1D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
