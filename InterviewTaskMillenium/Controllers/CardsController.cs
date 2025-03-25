@@ -2,6 +2,7 @@
 using Common;
 using Data;
 using InterviewTaskMillenium.ActionFilters;
+using InterviewTaskMillenium.Models;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
 
@@ -55,12 +56,7 @@ namespace InterviewTaskMillenium.Controllers
                 new CardParametersDTO(card.CardType, card.CardStatus, card.IsPinSet)).ToArray();
 
             _logger.LogTrace($"Method {nameof(GetAllowedActions)} executed with success.");
-            return Ok(new { allowed_actions = allowedActions });
-
-            // FURTHER IMPROVEMENT PROPOSAL: 
-            // Replace underscore for a space inside JSON structure (allowed_actions).
-            // This would require a class with a single property tagged with a [JsonPropertyName("allowed actions")].
-            // Might improve readability of the response.
+            return Ok(new AllowedActionsResponse(allowedActions));
         }
     }
 }
