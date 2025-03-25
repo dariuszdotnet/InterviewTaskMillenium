@@ -1,11 +1,15 @@
 using Data;
+using InterviewTaskMillenium.ExceptionFilters;
 using Logic;
 
 var builder = WebApplication.CreateBuilder(args);
 
 AddDIServices(builder);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<GlobalExceptionFilter>();
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
