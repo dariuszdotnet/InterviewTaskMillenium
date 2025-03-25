@@ -1,4 +1,5 @@
-﻿using Common;
+﻿using Asp.Versioning;
+using Common;
 using Data;
 using InterviewTaskMillenium.ActionFilters;
 using Logic;
@@ -9,7 +10,8 @@ namespace InterviewTaskMillenium.Controllers
     /// <summary>
     /// Controller dedicated for operations related to cards.
     /// </summary>
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{v:apiVersion}/[controller]")]
     [ApiController]
     public class CardsController : ControllerBase
     {

@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Data;
 using InterviewTaskMillenium.ExceptionFilters;
 using Logic;
@@ -13,6 +14,8 @@ builder.Services.AddControllers(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+SetUpVersioning(builder);
 
 var app = builder.Build();
 
@@ -31,6 +34,16 @@ static void AddDIServices(WebApplicationBuilder builder)
     builder.Services.AddScoped<ICardService, CardService>();
     //builder.Services.AddScoped<IAllowedActionsService, AllowedActionsNaiveSubstraction>();
     builder.Services.AddScoped<IAllowedActionsService, AllowedActionsCoR>();
+}
+
+static void SetUpVersioning(WebApplicationBuilder builder)
+{
+    builder.Services.AddApiVersioning(options =>
+    {
+        options.ReportApiVersions = true;
+        options.AssumeDefaultVersionWhenUnspecified = true;
+        options.DefaultApiVersion = new ApiVersion(1, 0);
+    });
 }
 
 static void TurnOnSwagger(WebApplication app)
