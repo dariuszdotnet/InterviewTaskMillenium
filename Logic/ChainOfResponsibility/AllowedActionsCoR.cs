@@ -15,18 +15,18 @@ namespace Logic
         public AllowedActionsCoR()
         {
             _firstHandler = new Action1Handler(
-                            new Action2Handler(
-                            new Action3Handler(
-                            new Action4Handler(
-                            new Action5Handler(
-                            new Action6Handler(
-                            new Action7Handler(
-                            new Action8Handler(
-                            new Action9Handler(
-                            new Action10Handler(
-                            new Action11Handler(
-                            new Action12Handler(
-                            new Action13Handler(null!)))))))))))));
+                             new Action2Handler(
+                              new Action3Handler(
+                               new Action4Handler(
+                                new Action5Handler(
+                                 new Action6Handler(
+                                  new Action7Handler(
+                                   new Action8Handler(
+                                    new Action9Handler(
+                                     new Action10Handler(
+                                      new Action11Handler(
+                                       new Action12Handler(
+                                        new Action13Handler(null!)))))))))))));
         }
 
         // <inheritdoc />

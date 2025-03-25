@@ -7,7 +7,7 @@ namespace Logic
     /// </summary>
     public abstract class AbstractActionHandler : IActionHandler
     {
-        protected IActionHandler? _nextHandler; // ? question mark here should it be? check this with null here and in other places
+        protected IActionHandler? _nextHandler;
 
         /// <summary>
         /// Name of the handler.
