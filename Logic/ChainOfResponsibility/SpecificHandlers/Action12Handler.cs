@@ -7,7 +7,7 @@ namespace Logic
     /// </summary>
     public class Action12Handler : AbstractActionHandler
     {
-        private static string _actionName = "ACTION12";
+        private static readonly string _actionName = "ACTION12";
 
         /// <summary>
         /// Constructor for <see cref="Action12Handler"/>.
