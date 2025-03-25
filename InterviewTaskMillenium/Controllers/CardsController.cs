@@ -1,5 +1,6 @@
 ﻿using Common;
 using Data;
+using InterviewTaskMillenium.ActionFilters;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,6 +38,8 @@ namespace InterviewTaskMillenium.Controllers
         /// <returns>If success returns OK response with JSON containing allowed actions names, uppercase. If the card was not found, it would return NotFound response.</returns>
         [HttpGet]
         [Route("/allowedactions/{userId}/{cardNumber}")]
+        [ValidateUserId]
+        [ValidateCardNumber]
         public async Task<IActionResult> GetAllowedActions([FromRoute] string userId, [FromRoute] string cardNumber)
         {
             var card = await _cardService.GetCardDetails(userId, cardNumber);
