@@ -38,13 +38,6 @@ namespace InterviewTaskMillenium.ActionFilters
                 return;
             }
 
-            if (userIdNumber != cardIdNumber)
-            {
-                context.Result = new BadRequestObjectResult(
-                    ResultsHelper.GetResultDetails(context.ModelState, "Parameters mismatch.", "CardNumber does not match its UserId.", 400));
-                return;
-            }
-
             // SYNTAX DILEMMA EXPLANATION:
             // I find syntax towards one liners more readable (at 4k screen) - current lines 22-23.
             // However I included syntax for same method spread over multiple lines, because I know some people find it more readable - lines 32-37.
