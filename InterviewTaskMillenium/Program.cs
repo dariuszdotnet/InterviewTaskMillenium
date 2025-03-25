@@ -1,3 +1,6 @@
+using Data;
+using Logic;
+
 var builder = WebApplication.CreateBuilder(args);
 
 AddDIServices(builder);
