@@ -19,7 +19,7 @@ namespace Logic
         protected override IEnumerable<string> HandleAction(CardParametersDTO request)
         {
             if(request.IsPinSet 
-                && new CardStatus[] { CardStatus.Active, CardStatus.Inactive }.Contains(request.CardStatus))
+                && new CardStatus[] { CardStatus.Ordered, CardStatus.Active, CardStatus.Inactive, CardStatus.Blocked }.Contains(request.CardStatus))
             {
                 yield return _actionName;
             }

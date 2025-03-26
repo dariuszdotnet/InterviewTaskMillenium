@@ -18,8 +18,9 @@ namespace Logic
         // <inheritdoc/>
         protected override IEnumerable<string> HandleAction(CardParametersDTO request)
         {
-            if (request.IsPinSet 
-                && new CardStatus[] { CardStatus.Active, CardStatus.Inactive }.Contains(request.CardStatus))
+            if ((request.IsPinSet && request.CardStatus == CardStatus.Blocked) || 
+                (request.IsPinSet == false 
+                    && new CardStatus[] { CardStatus.Ordered, CardStatus.Active, CardStatus.Inactive }.Contains(request.CardStatus)))
             {
                 yield return _actionName;
             }
